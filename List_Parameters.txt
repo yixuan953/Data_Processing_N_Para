@@ -1,0 +1,58 @@
+This file describes the parameters that used for calculating the N-cycling process
+
+To calculate the following factors, we need the original inputs as follows:
+
+1.  Climate:
+1-1 Annual precipitation
+1-2 Monthly precipitation
+1-3 Monthly average temperature
+
+2.  Hydrology:
+2-1 Monthly evapotranspiration?
+2-2 Fraction of groundwater leaching [we use the results of WOFOST? potential yield, rainfed, irrigated?]
+2-3 
+
+3.  Soil:
+3-1 Clay content of soil [percent weight, hwsd]
+3-2 Soil texture [sand, loam, peat, clay, & heavy clay, hwsd] https://www.hydroshare.org/resource/1361509511e44adfba814f6950c6e742/
+3-3 Initial SOC [percent weight, hwsd]
+3-4 C:N ratio of?? https://files.isric.org/soilgrids/latest/
+3-5 Obstacle to roots [20-40 cm, 40-60 cm, 60-80 cm, no obstacle]: Only Europe has this data, can we use clay content?
+
+4.  Others
+4-1 Slope [-]: https://data.isimip.org/datasets/20c14b44-45f6-48c4-b9e7-0039e71ba134/
+4-2 
+
+
+
+---------------------- Emission Factors -------------------
+The gaseous emission contains three parts: NH3, N2O, and NOx
+1. NH3 emission factor[-]of: (country-specific?)
+   1) Urea-based inorganic fertilizers
+   2) Other inorganic fertilizers + manure
+2. N2O emission factor[-]: Depends on annual precipitation
+
+
+----------- N losses through leaching and runoff ----------
+1. Runoff fraction = Lmax_runoff * fpre * ftexture * frock
+2. Leaching fraction = Lmax_leaching * flanduse * fpre * ftemp * froot * fsoc
+3. Ground flow fraction ????
+
+
+
+
+----------------------- N supply from soil -----------------
+1. Mineralization rate[]: From humus to inorganic N that is available for crop uptakes
+2. N supply from SOM decomposition [month-1]
+   = C total (Roth CN soil C pool) * k_rate (decompostion rate = 0.05 per year) * Modification(temp, moisture) * growing days/365
+??? Here we probably need to multiply a C:N ratio, how to calculate this CN ratio? SOC:N content?
+   In which:
+   - mtemp = 47.91/(1+e^106.06/(T+18.27))
+   - mmoist ~ TSMD (depends on monthly precipitation and evapotranspiration [which one should I use? No water limitation, with irrigation, or fully coupled evapotranspiration])
+
+
+
+------------------------- Other Factors --------------------
+1. N fixation: 
+   Arable crops: 2 kg N ha-1 yr-1  
+   Legumes: Fixated N is assumed to be equal to the amount of N in harvested products (????)
