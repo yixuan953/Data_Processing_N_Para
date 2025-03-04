@@ -11,7 +11,7 @@ ds = xr.open_dataset(file_path)
 for var in ds.data_vars:
     if np.issubdtype(ds[var].dtype, np.floating):  # Only process floating-point variables
         ds[var] = ds[var].fillna(-2.0)
-        # Which means that 106.6/(T+18.27) = -1
+        # Which means that 106.6/(T+18.27) = -2
 
 # Save the modified dataset to a new NetCDF file
 ds.to_netcdf(output_path)

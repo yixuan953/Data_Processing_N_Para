@@ -1,0 +1,12 @@
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/mainrice_GrowingDays.nc
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/maize_GrowingDays.nc
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/secondrice_GrowingDays.nc
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/soybean_GrowingDays.nc
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/springwheat_GrowingDays.nc
+Growing days have been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Processed/CropMask/Sow_Mat_Date/winterwheat_GrowingDays.nc
+Inverted latitudes for mainrice_GrowingDays.nc
+Inverted latitudes for maize_GrowingDays.nc
+Inverted latitudes for secondrice_GrowingDays.nc
+Inverted latitudes for soybean_GrowingDays.nc
+Inverted latitudes for springwheat_GrowingDays.nc
+Inverted latitudes for winterwheat_GrowingDays.nc
