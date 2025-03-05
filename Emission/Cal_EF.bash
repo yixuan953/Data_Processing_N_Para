@@ -12,4 +12,4 @@
 #--------------------Environment, Operations and Job steps-------------
 # Step 1 - Calculate EF_N2O 
 module load python/3.12.0
-python /lustre/nobackup/WUR/ESG/zhou111/Code/Data_Processing/N_cycling_Parameters/Emission/1_EF_N2O.py
+python /lustre/nobackup/WUR/ESG/zhou111/Code/Data_Processing/N_cycling_Parameters/Emission/1_EF_NOx.py
