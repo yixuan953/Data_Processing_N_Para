@@ -9,7 +9,13 @@ In which:
 3 - CorrectionFactor_temp: m_temp. The temperature [celsuis degree] (-10, 40) --> m_temp (0, 6.5)
     m_temp = 47.91 / (1 + e^(106.6 / (T + 18.27))) 
     Here, T is the monthly mean temperature calculated basing on the daily mean temperature.
-4 - CorrectionFactor_moisture: 
+4 - CorrectionFactor_moisture: m_moist
+    4-1 Calculate the maximum topsoil moisture deficit (TSMD_max) = -(20.0 + 1.3K - 0.01K^2) * D/23 if soil is vegetated
+        Here K is the clay content [%], D is the depth of topsoil depth [cm]?
+    4-2 Calculate the precipitation surplus = Monthly precipitation - Monthly Evapotranspiration [mm] Can I use the output of VIC here?
+    4-3 Calculate the TSMD = TSMD_acc + precipitation surplus 
+        Here, TSMDacc = max(TSMD, TSMD_max) if TSMD <0 OR 0.0 if TSMD>=0
+    4.4 m_moist = 1.0 if TSDM_acc < 0.444 TSMD OR 0.2 + 0.8 * (TSMD_max - TSMD_acc) /(TSMD_max - 0.444 * TSMD_max)
 5 - GrowingDays: The data source is from the crop calendar of Sacks et al. (2010) (DOI: 10.1111/j.1466-8238.2010.00551.x)
 Here:
     For regions where maturity and sowing happen in the same year: GrowingDays =  (mat_a1 - sow_a1)  (average matuarity date - average sowing date) * 10 (in order to transform dekad to days) 
