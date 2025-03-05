@@ -1,0 +1,1 @@
+EF_N2O has been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Para_N_Cycling/EF_N2O.nc
