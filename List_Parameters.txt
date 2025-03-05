@@ -42,13 +42,12 @@ The gaseous emission contains three parts: NH3, N2O, and NOx
 
 
 ----------------------- N supply from soil -----------------
-1. Mineralization rate[]: From humus to inorganic N that is available for crop uptakes
+1. Mineralization rate []: From humus to inorganic N that is available for crop uptakes
 2. N supply from SOM decomposition [month-1]
    = C total (Roth CN soil C pool) * k_rate (decompostion rate = 0.05 per year) * Modification(temp, moisture) * growing days/365
-??? Here we probably need to multiply a C:N ratio, how to calculate this CN ratio? SOC:N content?
    In which:
-   - mtemp = 47.91/(1+e^106.06/(T+18.27))
-   - mmoist ~ TSMD (depends on monthly precipitation and evapotranspiration [which one should I use? No water limitation, with irrigation, or fully coupled evapotranspiration])
+   - m_temp = 47.91/(1+e^106.06/(T+18.27))
+   - m_moist ~ TSMD (depends on monthly precipitation and evapotranspiration [which one should I use? No water limitation, with irrigation, or fully coupled evapotranspiration])
 
 
 

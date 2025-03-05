@@ -1,0 +1,1 @@
+TSMD_max has been calculated and saved to /lustre/nobackup/WUR/ESG/zhou111/Data/Para_N_Cycling/TSMD_max.nc

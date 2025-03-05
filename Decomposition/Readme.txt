@@ -3,6 +3,8 @@ Soil_N_decomp = (SOC * SOC_decomposition_rate * CorrectionFactor_temp * Correcti
 
 In which:
 1 - SOC data is available from the HSWD at: https://www.hydroshare.org/resource/1361509511e44adfba814f6950c6e742/
+    - Variable name: oc [percent weight, 0-1]
+    - Long name: Topsoil Organic Carbon 
 2 - Soil decomposition rate = 0.05/yr (Reference?)
 3 - CorrectionFactor_temp: m_temp. The temperature [celsuis degree] (-10, 40) --> m_temp (0, 6.5)
     m_temp = 47.91 / (1 + e^(106.6 / (T + 18.27))) 
