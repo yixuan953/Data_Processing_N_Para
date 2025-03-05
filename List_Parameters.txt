@@ -23,8 +23,6 @@ To calculate the following factors, we need the original inputs as follows:
 4-1 Slope [-]: https://data.isimip.org/datasets/20c14b44-45f6-48c4-b9e7-0039e71ba134/
 4-2 
 
-
-
 ---------------------- Emission Factors -------------------
 The gaseous emission contains three parts: NH3, N2O, and NOx
 1. NH3 emission factor[-]of: (country-specific?)
@@ -38,9 +36,6 @@ The gaseous emission contains three parts: NH3, N2O, and NOx
 2. Leaching fraction = Lmax_leaching * flanduse * fpre * ftemp * froot * fsoc
 3. Ground flow fraction ????
 
-
-
-
 ----------------------- N supply from soil -----------------
 1. Mineralization rate []: From humus to inorganic N that is available for crop uptakes
 2. N supply from SOM decomposition [month-1]
@@ -48,8 +43,6 @@ The gaseous emission contains three parts: NH3, N2O, and NOx
    In which:
    - m_temp = 47.91/(1+e^106.06/(T+18.27))
    - m_moist ~ TSMD (depends on monthly precipitation and evapotranspiration [which one should I use? No water limitation, with irrigation, or fully coupled evapotranspiration])
-
-
 
 ------------------------- Other Factors --------------------
 1. N fixation: 
