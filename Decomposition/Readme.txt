@@ -1,6 +1,7 @@
 Soil N supply through SOM decomposition at annual scale is calculated using the following function:
 Soil_N_decomp = (SOC * SOC_decomposition_rate * CorrectionFactor_temp * CorrectionFactor_moisture * GrowingDays/365) / soil CN ratio
 
+
 In which:
 1 - SOC data is available from the HSWD at: https://www.hydroshare.org/resource/1361509511e44adfba814f6950c6e742/
     - Variable name: oc [percent weight, 0-1]
@@ -26,3 +27,5 @@ Here:
     6-2 Soil bulk density (cg/cm3) is available for 3 layers (0-5, 5-15, 15-30 cm) at 5 km
     6-3 Soil nitrogen content (cg/kg) is available for 3 layers (0-5, 5-15, 15-30 cm) at 5 km
 The data is upscaled to 0-30 cm at 0.5 degree, by aggregating the total SOC and soil N amount [kg] (SOC_content or Soil_N_content * BulkDensity * LayerDepth * 5km * 5km)
+
+Question: Can I assume the SOC does not change within 30 years?

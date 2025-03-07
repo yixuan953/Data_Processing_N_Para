@@ -29,7 +29,8 @@ The gaseous emission contains three parts: NH3, N2O, and NOx
 1. NH3 emission factor[-]of: (country-specific?)
    1) Urea-based inorganic fertilizers
    2) Other inorganic fertilizers + manure
-2. N2O emission factor[-]: Depends on annual precipitation
+2. N2O emission factor[-]: 
+3. NOx emission factor[-]: Depends on annual precipitation
 
 
 ----------- N losses through leaching and runoff ----------
