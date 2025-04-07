@@ -19,7 +19,11 @@ The gaseous emission factors contains three parts: EF_NOx, EF_NH3, and EF_N2O. I
       - Other fertilizers: <10%
    
 
-   
+3. EF_N20: 
 
-3. EF_N20: 2019 IPCC guideline (Table 11.1 from Page 8)
+In the new version of Miterra: It is dependent on climate zone and fertilizer types
+Annual mean temperature, precipitation, and evapotranspiration are from ERA5 and available at: https://cds.climate.copernicus.eu/datasets/multi-origin-c3s-atlas?tab=download
+
+In the old version of Miterra:
+2019 IPCC guideline (Table 11.1 from Page 8)
 Source: https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch11_Soils_N2O_CO2.pdf
