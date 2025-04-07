@@ -13,16 +13,16 @@
 
 # Step1. Reproject the original .tif files 
 # This part does not work properly. I gave up. I did the reprojection using ArcGIS pro and it is way easier.
-Reproject(){
-    module load gdal
-    for file in /lustre/nobackup/WUR/ESG/zhou111/Data/Raw/Soil/CN_ratio_cal/*.tif; do
-        gdalwarp -s_srs EPSG:54008 -t_srs EPSG:4326 -r bilinear \
-        -srcnodata -32768 -dstnodata -32768 \
-        $file \
-        "/lustre/nobackup/WUR/ESG/zhou111/Data/Raw/Soil/CN_ratio_cal/Reproject_$(basename "$file" .tif).tif"
-    done
+# Reproject(){
+#     module load gdal
+#     for file in /lustre/nobackup/WUR/ESG/zhou111/Data/Raw/Soil/CN_ratio_cal/*.tif; do
+#         gdalwarp -s_srs EPSG:54008 -t_srs EPSG:4326 -r bilinear \
+#         -srcnodata -32768 -dstnodata -32768 \
+#         $file \
+#         "/lustre/nobackup/WUR/ESG/zhou111/Data/Raw/Soil/CN_ratio_cal/Reproject_$(basename "$file" .tif).tif"
+#     done
 
-}
+# }
 # Reproject
 
 # Python scripts

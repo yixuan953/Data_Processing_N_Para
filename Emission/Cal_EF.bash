@@ -15,6 +15,7 @@
 # python /lustre/nobackup/WUR/ESG/zhou111/Code/Data_Processing/N_cycling_Parameters/Emission/1_EF_NOx.py
 
 # Step 2 - Calculate EF_NO2
+# 2-1 Get the annual mean T and ET-P based on ERA5 data
 module load cdo
 input_dir="/lustre/nobackup/WUR/ESG/zhou111/Data/Raw/Climate/ERA5"
 process_dir="/lustre/nobackup/WUR/ESG/zhou111/Data/Processed/Climate/ERA5"
@@ -25,6 +26,8 @@ get_mean_annual_T(){
     ${process_dir}/t_1985_2015.nc
 
     cdo yearmean ${process_dir}/t_1985_2015.nc ${process_dir}/t_annual_1985_2015.nc
+
+    cdo timmean ${process_dir}/t_annual_1985_2015.nc ${process_dir}/t_mean_1985_2015.nc
     
     cdo remapcon,grid_0.5.txt ${process_dir}/t_mean_1985_2015.nc ${input_dir}/t_mean_1985_2015_05deg.nc
 
@@ -53,3 +56,6 @@ get_mean_ET(){
 
 get_mean_annual_T
 get_mean_annual_ET
+
+# 2-2 Get the climate zone for further EF_N2O calculation
+python /lustre/nobackup/WUR/ESG/zhou111/Code/Data_Processing/N_cycling_Parameters/Emission/2_EF_N2O_Climate_Zone.py

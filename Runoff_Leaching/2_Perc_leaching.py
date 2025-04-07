@@ -1,5 +1,5 @@
 # This code is used to calculate the leaching fraction (L_runoff)
-# Lleaching = Lmax_leaching × flanduse × fprecip × ftemp × froot × fsoc
+# Leaching = Lmax_leaching × flanduse × fprecip × ftemp × froot × fsoc
 
 import xarray as xr
 import numpy as np
