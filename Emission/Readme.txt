@@ -18,11 +18,19 @@ The gaseous emission factors contains three parts: EF_NOx, EF_NH3, and EF_N2O. I
       - Urea-based N-fertiliser has relative high emission factor: 15-20%
       - Other fertilizers: <10%
    
-
 3. EF_N20: 
-
 In the new version of Miterra: It is dependent on climate zone and fertilizer types
 Annual mean temperature, precipitation, and evapotranspiration are from ERA5 and available at: https://cds.climate.copernicus.eu/datasets/multi-origin-c3s-atlas?tab=download
+                     | Cool Moist | Cool Dry | Warm Moist | Warm Dry |
+   Mineral fertiliser|   0.016        0.005      0.016        0.005
+   Manure            |   0.006        0.005      0.006        0.005
+   Crop residue      |   0.006        0.005      0.006        0.005
+
+Here:
+   Cool moist: T <= 10 & P > ET 
+   Cool dry:   T <= 10 & P <= ET
+   Warm moist: T > 10 & P > ET 
+   Warm dry:   T > 10 & P <= ET
 
 In the old version of Miterra:
 2019 IPCC guideline (Table 11.1 from Page 8)

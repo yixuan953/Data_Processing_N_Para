@@ -1,8 +1,0 @@
-load cdo 1.9.3 (GCC) library and binaries.
-load hdf5 1.10.1 (gcc) library and binaries.
-remove Scientific Linux 7 libraries.
-load Scientific Linux 7 libraries.
-remove Scientific Linux 7 libraries.
-load Scientific Linux 7 libraries.
-remove Scientific Linux 7 libraries.
-load Scientific Linux 7 libraries.

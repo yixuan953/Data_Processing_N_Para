@@ -17,13 +17,14 @@ ds_t = xr.open_dataset(input_file_t)
 time = ds_t["time"].values
 lat = ds_t["lat"].values
 lon = ds_t["lon"].values
-t = ds_t["t"][:]  
+t = ds_t["t"].isel(time=0)  # Unit: degreeC
+t = t.where((t > -100) & (t < 100))
 
 ds_wb = xr.open_dataset(input_file_wb)
 time = ds_wb["time"].values
 lat = ds_wb["lat"].values
 lon = ds_wb["lon"].values
-wb = ds_t["t"][:]  # Unit
+wb = ds_wb["evspsbl"].isel(time=0)  # Unit: mm
 
 # Assign different climate zone number to deifferent pixels
 Climate_Zone = xr.full_like(t, fill_value=np.nan)  # Create an empty array with the same shape
@@ -34,17 +35,16 @@ Climate_Zone = xr.where((t > 10) & (wb < 0), 3, Climate_Zone) # Warm moist
 Climate_Zone = xr.where((t > 10) & (wb >= 0), 4, Climate_Zone) # Warm dry
 
 a = xr.DataArray(
-    Climate_Zone,
-    dims=("time","lat", "lon"),
+    Climate_Zone.data,
+    dims=("lat", "lon"),
     coords={
-    "time": time,
     "lon": lon,
     "lat": lat,
     },
     name = "Climate_Zone",
     attrs={
            "units": "-",
-           "description": "# 1-Cool Moist; 2-Cool Dry; 3-War Moist; 4-Warm Dry"
+           "description": "# 1-Cool Moist; 2-Cool Dry; 3-Warm Moist; 4-Warm Dry"
             }
 )
 
