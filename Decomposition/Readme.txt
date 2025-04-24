@@ -27,5 +27,3 @@ Here:
     6-2 Soil bulk density (cg/cm3) is available for 3 layers (0-5, 5-15, 15-30 cm) at 5 km
     6-3 Soil nitrogen content (cg/kg) is available for 3 layers (0-5, 5-15, 15-30 cm) at 5 km
 The data is upscaled to 0-30 cm at 0.5 degree, by aggregating the total SOC and soil N amount [kg] (SOC_content or Soil_N_content * BulkDensity * LayerDepth * 5km * 5km)
-
-Question: Can I assume the SOC does not change within 30 years?

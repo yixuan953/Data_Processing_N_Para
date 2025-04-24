@@ -1,7 +1,7 @@
 In order to calculate the N losses through surface runoff and leaching, we need to calculate the fraction of N losses through runoff (Lrunoff) and leaching (Lleaching)
 In which: 
-Lrunoff = Lmax_runoff × flanduse × fprecip × ftexture × froc
-Lleaching = Lmax_leaching × flanduse × fprecip × ftemp × froot × fsoc
+Lrunoff = Lmax_runoff × min(flanduse, fprecip, ftexture × froc)
+Lleaching = Lmax_leaching * min(flanduse, fprecip, ftemp, froot, fsoc)
 
 1. Lrunoff calculation contains elements as follows:
    1) Lmax_runoff depends on slope percentage (= slope degree * 100)
@@ -9,7 +9,7 @@ Lleaching = Lmax_leaching × flanduse × fprecip × ftemp × froot × fsoc
    3) fprecip depends on precipitation surplus (mm): Annaul precipitation - annual evapotranspiration
    4) ftexture depends on the clay content (%)
    5) frock is a reduction factor for the depth to rock: Soil Depth from ISRIC (https://data.isric.org/geonetwork/srv/api/records/f36117ea-9be5-4afd-bb7d-7a3e77bf392a)
-   Questions: here I do not have the data, but can I assume it is larger than 25 cm as my topsoil depth is assumed to be 30 cm, and the rooting depth of all of my crops are larger than 40cm
+      Here I assume it is larger than 40 cm as the rooting depth of all of my crops are larger than 40cm
 
 2. Leaching calculation contains elements as follows:
    1) Lmax_leaching depends on texture class, the value
@@ -20,11 +20,11 @@ Lleaching = Lmax_leaching × flanduse × fprecip × ftemp × froot × fsoc
    3) fprecip depends on 
         - Precipitation surplus (mm): Annaul precipitation - annual evapotranspiration [mm]
         - Soil texture class (same classification as step 2-1)
-   4) ftemp depends on average annual temperature [celsuis degree], the value
+   4) ftemp depends on average annual temperature [celsuis degree], the value:
             = 1.00, if Ave_temp < 5
             = 0.75, if Ave_temp >=5, <15
             = 0.50, if Ave_temp =>15
-   5) froot depends on rooting depth class, the value (Question: only Europe has this data) 
+   5) froot depends on rooting depth class
             = 1.00, if the obastacle to roots between 20–60 cm depth
             = 0.75, if the obastacle to roots between 60-80 cm depth, or no obastacle to roots
           We could make assumptions using the rooting depth data of wofost?
